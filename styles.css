@@ -1,0 +1,132 @@
+body {
+  background: url(images/backgr-2.jpg);
+  font-family: "Tahomas", sans-serif;
+}
+fieldset {
+  border: none;
+}
+.container {
+  width: 50%;
+  margin: auto;
+}
+.title1 p {
+  margin-top: -20px;
+  font-size: 15px; /* margin-top: -10px; */
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+h1,
+p {
+  /* margin: auto; */
+  color: rgb(133, 130, 130);
+  text-align: center;
+  font-family: verdana;
+}
+form {
+  color: rgb(177, 11, 155);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgba(249, 107, 213, 0.9);
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin: auto;
+}
+input,
+select {
+  color: rgb(249, 248, 248);
+  background-color: rgb(249, 107, 213);
+  border: 2px solid aliceblue;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 2px;
+  border: none;
+  padding-left: 8px;
+}
+/* input {
+  margin-bottom: -5px;
+} */
+.part1 input {
+  margin-bottom: 2px;
+  color: white;
+  text-align: left;
+  font-weight: 400;
+  margin-left: 5px;
+  width: 95%;
+}
+part1,
+p {
+  color: white;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+part1 input,
+part1 label {
+  color: white;
+}
+
+.part2,
+p {
+  margin-bottom: 2px;
+}
+.part4,
+p {
+  margin-bottom: 2px;
+}
+
+select {
+  width: 91%;
+  margin: auto;
+  padding: 4px 2px;
+}
+.part4,
+select {
+  width: 91%;
+  margin: auto;
+  padding: 4px 2px;
+}
+.part3 p {
+  margin-bottom: 2px;
+  margin-left: 20px;
+}
+.part5 p {
+  margin-bottom: 2px;
+  margin-left: 20px;
+}
+div {
+  margin: 5px 20px;
+  /* padding-bottom: 10px; */
+}
+
+input,
+label {
+  /* align-items: baseline; */
+  vertical-align: middle;
+  /* padding-bottom:  */
+}
+.part3,
+input {
+  width: auto;
+}
+.part5,
+input {
+  width: auto;
+  /* margin-bottom: -10px; */
+}
+
+input[type="submit"] {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  height: 2em;
+  width: 200px;
+  font-size: 1.1rem;
+  border-color: white;
+}

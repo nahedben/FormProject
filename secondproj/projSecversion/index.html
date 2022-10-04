@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+< lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title1">
+        <h1 id="title">FreeLanguagesRoom Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </div>
+      <form action="" id="survey-form">
+        <!-- 4 task -->
+        <fieldset class="part1">
+          <label for="name" id="name-label"
+            >Name
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </label>
+
+          <!-- 5th & 6th tasks -->
+          <label for="email" id="email-label">
+            Email
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your Email"
+              required
+            />
+          </label>
+          <!-- 7th & 8th Tasks -->
+          <label for="number" id="number-label">
+            Age
+            <input
+              type="number"
+              id="number"
+              placeholder="Age"
+              min="13"
+              max="120"
+              required
+            />
+          </label>
+        </fieldset>
+        <!--  12th task  -->
+        <fieldset class="part2">
+          <p>Which option best describes your current role?</p>
+
+          <select name="your-activity" id="dropdown" required>
+            <option value="">Select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Full time job</option>
+            <option value="3">Full time learner</option>
+            <option value="4">Prefer not to say</option>
+            <option value="5">Other</option>
+          </select>
+        </fieldset>
+
+        <!-- 13th task  -->
+        <fieldset class="part3">
+          <p>Would you recommend FreeLanguagesRoom to a friend?</p>
+
+          <label for="answer">
+            <input type="radio" name="answer" id="definitely" value="definitely" class="inline" />
+            Definitely
+          </label>
+
+          <label for="answer">
+            <input type="radio" name="answer" id="maybe" class="inline" value="maybe" /> Maybe
+          </label>
+
+          <label for="answer">
+            <input type="radio" name="answer" id="not-sure" value="notsure" class="inline" />
+            Not sure
+          </label>
+        </fieldset>
+        <fieldset class="part4">
+          <p>What is your favorite feature of FreeLanguagesRoom?</p>
+          <label>
+            <select  name="your-feature" id="dropdown-2">
+              <option value="">Select an option</option>
+              <option value="1">Challenges</option>
+              <option value="2">Multy Language</option>
+              <option value="3">Community</option>
+              <option value="4">ChatRoom</option>
+            </select>
+          </label>
+
+        </fieldset>
+        <fieldset class="part5">
+          <p>What would you like to see improved? (Check all that apply)</p>
+
+          <label for="spelling">
+            <input
+              type="checkbox"
+              id="spelling "
+              name="spelling"
+              value="spelling"
+              class="inline"
+            />
+            Spelling
+          </label>
+          <label for="writing">
+            <input type="checkbox" id="writing" name="writing" class="inline" value="writing"/>
+            Writing
+          </label>
+          <label for="pronunciation">
+            <input
+              type="checkbox"
+              id="pronuciation"
+              name="data-visualization"
+              class="inline"
+              value="data-visualisation"
+            />
+            Data Visualization
+          </label>
+          <label for="learn-new-lang">
+            <input
+              type="checkbox"
+              id="learn-new-lang"
+              name="learn-new-lang"
+              class="inline"
+              value="learn-new-lang"
+            />
+            Learn New Language
+          </label>
+          <label for="meet-friends">
+            <input
+              type="checkbox"
+              id="meet-friends"
+              name="meet-friends"
+              class="inline"
+              value="meet-freinds"
+            />
+            Meet New Friends
+          </label>
+          <label for="improve-lang">
+            <input
+              type="checkbox"
+              id="improve-lang"
+              name="improve-lang"
+              class="inline"
+              value="improve-lang"
+            />
+            Improve Language you got
+          </label>
+          <label for="videos" class="inline">
+            <input type="checkbox" id="videos" name="videos" class="inline"
+            value="videos" />
+            Videos
+          </label>
+          <label for="city-meetups">
+            <input
+              type="checkbox"
+              id="city-meetups"
+              name="city-meetups"
+              class="inline"
+              value="city-meetups"
+            />
+            City Meetups
+          </label>
+          <label for="forum">
+            <input type="checkbox" id="forum" name="forum" class="inline"
+            value="forum"/>
+            Forum
+          </label>
+          <label for="additional-courses">
+            <input
+              type="checkbox"
+              id="additional-courses"
+              name="additional-courses"
+              class="inline"
+              value="additional-courses"
+            />
+            Additional Courses
+          </label>
+        </fieldset>
+         <label for="comment">
+            Your comment:
+            <textarea
+              class="long-text"
+              type="text"
+              name="comment"
+              id="comment"
+              placeholder="You comment here..."
+            ></textarea>
+          </label>
+        
+        <input type="submit" id="submit" value="Submit" />
+        
+      </form>
+    </div>
+  </body>
+</html>

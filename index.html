@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+    <div class="title1">
+    <h1 id="title">FreeLanguagesRoom Survey Form</h1>
+    <p id="decription">
+      Thank you for taking the time to help us improve the platform
+    </p>
+  </div>
+    <form action="" id="survey-form">
+      <!-- 4 task -->
+      <fieldset class="part1">
+      <label for="name-label"
+        ><p> Name </p> <input type="text" id="name" placeholder="Enter your name" required />
+      </label>
+
+      <!-- 5th & 6th tasks -->
+      <label for="email-label">
+        <p>Email</p>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your Email"
+          required
+        />
+      </label>
+      <!-- 7th & 8th Tasks -->
+      <label for="number-label">
+       <p>Age</p>
+        <input
+          type="number"
+          id="number"
+          placeholder="Age"
+          min="13"
+          max="120"
+          required
+        />
+      </label>
+    </fieldset>
+      <!--  12th task  -->
+      <fieldset class="part2">  
+        <p> Which option best describes your current role?</p>
+      
+        <select name="your-activity" id="dropdown" required>
+          <option value="">Select current role</option>
+          <option value="1">Student</option>
+          <option value="2">Full time job</option>
+          <option value="3">Full time learner</option>
+          <option value="4">Prefer not to say</option>
+          <option value="5">Other</option>
+        </select>
+      </fieldset>
+      
+      <!-- 13th task  -->
+      <fieldset class="part3">
+        
+        <p> Would you recommend FreeLanguagesRoom to a friend?</p>
+      
+       <div class="radio">
+        <input type="radio" name="answer" id="definitely" /> <label for="answer">Definitely
+        </label>
+      </div>
+      <div class="radio">
+        <label for="answer">
+        <input type="radio" name="answer" id="maybe" /><label for="answer"> Maybe
+        </label>
+      </div>
+      <div class="radio">
+        
+        <input type="radio" name="answer" id="not-sure" /> <label for="answer">Not sure
+      </label>
+    </div>
+    </fieldset>
+    <fieldset class="part4">
+      
+      <p> What is your favorite feature of FreeLanguagesRoom?</p>
+    <label>
+    <select id="your-feature" name="your-feature" id="dropdown">
+      <option value="">Select an option</option>
+      <option value="1">Challenges</option>
+      <option value="2">Multy Language</option>
+      <option value="3">Community</option>
+      <option value="4">ChatRoom</option>
+    </select>
+  </label>
+  </fieldset>
+   <fieldset class="part5"> 
+     
+     <p> What would you like to see improved? (Check all that apply)</p>
+    
+    
+    <div>
+    <input type="checkbox" id="spelling " name="spelling"><label for="spelling"> Spelling
+    </label>
+    </div>
+    <div>
+    <input type="checkbox" id="writing" name="writing"> <label for="writing">Writing
+    </label>
+  </div>
+    <div>
+    <input type="checkbox" id="pronuciation" name="data-visualization"> <label for="pronunciation">Data Visualization
+    </label>
+  </div>
+
+
+    <div>
+    <input type="checkbox" id="learn-new-lang" name="learn-new-lang"><label for="learn-new-lang"> Learn New Language
+    </label>
+  </div>
+  <div>
+    
+    <input type="checkbox" id="meet-friends" name="meet-friends"> <label for="meet-friends">Meet New Friends
+    </label>
+  </div>
+  <div>
+    
+    <input type="checkbox" id="improve-lang" name="improve-lang"> <label for="improve-lang">Improve Language you got
+    </label>
+  </div>
+  <div>
+    
+    <input type="checkbox" id="videos" name="videos"><label for="videos"> Videos
+    </label>
+  </div>
+  <div>
+    
+    <input type="checkbox" id="city-meetups" name="city-meetups"><label for="city-meetups"> City Meetups
+    </label>
+  </div>
+  <div>
+    
+    <input type="checkbox" id="forum" name="forum"> <label for="forum">Forum
+    </label>
+  </div>
+  <div>
+    
+    <input type="checkbox" id="additional-courses" name="additional-courses"> <label for="additional-courses">Additional Courses
+    </label>
+  </div>
+  </fieldset>
+    <input type="submit" value="Submit" />
+    </form>
+  </div>
+  </body>
+</html>

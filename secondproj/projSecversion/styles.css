@@ -1,0 +1,79 @@
+body {
+  background: url(/images/backgr-2.jpg);
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+form {
+  width: 65%;
+  background-color: rgb(255, 131, 207);
+  margin: auto;
+  opacity: 0.95;
+  border-radius: 3px;
+  padding: 5px 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.title1 p,
+h1 {
+  color: gray;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.title1 p {
+  font-size: large;
+  margin-top: -5px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+}
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+fieldset {
+  border: none;
+}
+input,
+select {
+  color: grey;
+  border: solid 2px rgb(255, 131, 207);
+  width: 100%;
+  height: auto;
+  padding: 10px 5px 5px 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+select {
+  box-sizing: content-box;
+}
+.inline {
+  /* box-sizing: content-box; */
+  width: unset;
+  vertical-align: baseline;
+  margin-right: 10px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgb(199, 19, 130);
+}
+input[type="submit"] {
+  width: 40%;
+  display: block;
+  margin: 10px auto;
+  /* margin: 5px 20px auto auto; */
+  box-sizing: border-content;
+}
+fieldset p {
+  /* color: rgb(159, 14, 104); */
+  color: rgb(118, 107, 107);
+  font-size: larger;
+}
+.long-text {
+  display: block;
+  width: 400px;
+  height: auto;
+  min-height: 200px;
+  margin-top: 10px;
+}
