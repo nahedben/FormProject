@@ -23,3 +23,10 @@ h2 {
 h2:last-of-type {
   color: gray;
 }
+.em-test {
+  font-size: 1.5rem;
+}
+.em-test2 {
+  color: red;
+  font-size: 16px;
+}

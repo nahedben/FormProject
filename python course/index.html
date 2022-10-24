@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>python tech.</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>a crash course in python</header>
+      <div>
+        <a id="title1" class="nav-link" href="#getting-python"
+          >getting python</a
+        >
+      </div>
+      <div>
+        <a id="title2" class="nav-link" href="#whitespace-formatting"
+          >whitespace formatting
+        </a>
+      </div>
+      <div>
+        <a id="title3" class="nav-link" href="#modules">modules</a>
+      </div>
+      <div>
+        <a id="title4" class="nav-link" href="#arithmetic">arithmetic</a>
+      </div>
+      <div>
+        <a id="title5" class="nav-link" href="#function">function</a>
+      </div>
+      <div>
+        <a id="title6" class="nav-link" href="#strings">strings</a>
+      </div>
+      <div>
+        <a id="title7" class="nav-link" href="#exceptions">exceptions</a>
+      </div>
+      <div>
+        <a id="title8" class="nav-link" href="#lists">lists</a>
+      </div>
+      <div>
+        <a id="title9" class="nav-link" href="#tuples">tuples</a>
+      </div>
+      <div>
+        <a id="title10" class="nav-link" href="#dictionaries">dictionaries</a>
+      </div>
+      <div>
+        <a id="title11" class="nav-link" href="#sets">sets</a>
+      </div>
+      <div>
+        <a id="title13" class="nav-link" href="#truthiness">truthiness</a>
+      </div>
+      <div>
+        <a id="title11" class="nav-link" href="#the-not-so-basics"
+          >the-not-so-basics</a
+        >
+      </div>
+      <div>
+        <a id="title11" class="nav-link" href="#object-oriented-programming"
+          >object-oriented-programming</a
+        >
+      </div>
+      <div class="last-nav"></div>
+    </nav>
+    <main id="main-doc">
+      <!-- the question 4 -->
+      <section class="main-section" id="getting-python">
+        <header>getting python</header>
+        <p>
+          You can download Python from python.org. But if you don't already have
+          Python, I recommend instead installing the Anaconda distribution,
+          which already includes most of the libraries that you need to do data
+          science.
+        </p>
+        <p>
+          As I write this, the latest version of Python is 3.4. At
+          DataSciencester, however, we use old, reliable Python 2.7. Python 3 is
+          not backward-compatible with Python 2, and many important libraries
+          only work well with 2.7. The data science community is still firmly
+          stuck on 2.7, which means we will be, too. Make sure to get that
+          version.
+        </p>
+        <p>
+          If you don't get Anaconda, make sure to install pip, which is a Python
+          package manager that allows you to easily install third-party packages
+          (some of which we'll need). It's also worth getting IPython, which is
+          a much nicer Python shell to work with.
+        </p>
+        <p>
+          (If you installed Anaconda then it should have come with pip and
+          IPython.) Just run:
+        </p>
+
+        <code> pip install ipython </code>
+        <p>
+          and then search the Internet for solutions to whatever cryptic error
+          messages that causes.
+        </p>
+      </section>
+      <section class="main-section" id="whitespace-formatting">
+        <header>whitespace formatting</header>
+        <p>
+          Many languages use curly braces to delimit blocks of code. Python uses
+          indentation:
+        </p>
+        <code>
+          <ul>
+            <li class="code-li">for i in [1, 2, 3, 4, 5]:</li>
+            <li class="code-li indent">
+              print i # first line in "for i" block
+            </li>
+            <li class="code-li indent">for j in [1, 2, 3, 4, 5]:</li>
+            <li class="code-li indent2">
+              print j # first line in "for j" block
+            </li>
+            <li class="code-li indent2">
+              print i + j # last line in "for j" block
+            </li>
+
+            <li class="code-li indent">print i # last line in "for i" block</li>
+            <li class="code-li">print "done looping</li>
+          </ul></code
+        >
+        <p>
+          This makes Python code very readable, but it also means that you have
+          to be very careful with your formatting. Whitespace is ignored inside
+          parentheses and brackets, which can be helpful for long-winded
+          computations
+        </p>
+        <code
+          >long_winded_computation = (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 +
+          11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20)
+        </code>
+        <p>and for making code easier to read:</p>
+        <code>
+          <ul>
+            <li class="code-li">
+              list_of_lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+            </li>
+            <li class="code-li">easier_to_read_list_of_lists = [ [1, 2, 3],</li>
+            <li class="code-li long-indent">[4, 5, 6],</li>
+            <li class="code-li long-indent">[7, 8, 9] ]</li>
+          </ul></code
+        >
+        <p>
+          One consequence of whitespace formatting is that it can be hard to
+          copy and paste code into the Python shell. For example, if you tried
+          to paste the code:
+        </p>
+        <code>
+          <ul>
+            <li class="code-li">for i in [1, 2, 3, 4, 5]:</li>
+            <li class="code-li indent"></li>
+            <li class="code-li indent"># notice the blank line</li>
+            <li class="code-li indent">print i</li>
+          </ul></code
+        >
+      </section>
+
+      <section class="main-section" id="modules">
+        <header>modules</header>
+        <p>
+          Certain features of Python are not loaded by default. These include
+          both features included as part of the language as well as third-party
+          features that you download yourself. In order to use these features,
+          you'll need to import the modules that contain them. One approach is
+          to simply import the module itself:
+        </p>
+        <code>
+          <ul>
+            <li class="code-li ord">import re</li>
+            <li class="code-li ord">my_regex = re.compile("[0-9]+", re.I)</li>
+          </ul>
+        </code>
+        <p>
+          Here re is the module containing functions and constants for working
+          with regular expressions. After this type of import you can only
+          access those functions by prefixing them with re.. If you already had
+          a different re in your code you could use an alias:
+        </p>
+        <code>
+          <ul>
+            <li class="code-li ord">import re as regex</li>
+            <li class="code-li ord">
+              my_regex = regex.compile("[0-9]+", regex.I)
+            </li>
+          </ul>
+        </code>
+        <p>
+          You might also do this if your module has an unwieldy name or if
+          you’re going to be typing it a lot. For example, when visualizing data
+          with matplotlib, a standard con‐ vention is:
+        </p>
+        <code class="ord"> import matplotlib.pyplot as plt </code>
+      </section>
+      <section class="main-section" id="arithmetic">
+        <header>arithmetic</header>
+
+        <p>
+          Python 2.7 uses integer division by default, so that 5 / 2 equals 2.
+          Almost always this is not what we want, so we will always start our
+          files with:
+        </p>
+        <code class="ord">from __future__ import division </code>
+        <p>
+          after which 5 / 2 equals 2.5. Every code example in this book uses
+          this new-style division. In the handful of cases where we need integer
+          division, we can get it with a double slash: 5 // 2
+        </p>
+      </section>
+      <section class="main-section" id="function">
+        <header>function</header>
+        <p>
+          A function is a rule for taking zero or more inputs and returning a
+          corresponding output. In Python, we typically define functions using
+          def:
+        </p>
+
+        <code>
+          <ul>
+            <li class="code-li">def double(x):</li>
+            <li class="code-li indent">
+              """this is where you put an optional docstring
+            </li>
+            <li class="code-li indent">
+              that explains what the function does.
+            </li>
+            <li class="code-li indent">
+              for example, this function multiplies its input by 2"""
+            </li>
+            <li class="code-li indent">return x * 2</li>
+          </ul>
+        </code>
+        <p>
+          Python functions are first-class, which means that we can assign them
+          to variables and pass them into functions just like any other
+          arguments:
+        </p>
+        <code>
+          <ul>
+            <li class="code-li">def apply_to_one(f):</li>
+            <li class="code-li indent">
+              """calls the function f with 1 as its argument"""
+            </li>
+            <li class="code-li indent">return f(1)</li>
+            <li class="code-li indent">
+              my_double = double # refers to the previously defined function
+            </li>
+            <li class="code-li indent">
+              x = apply_to_one(my_double) # equals 2
+            </li>
+          </ul>
+        </code>
+        <p>It is also easy to create short anonymous functions, or lambdas:</p>
+        <code>
+          <ul>
+            <li class="code-li">
+              y = apply_to_one(lambda x: x + 4) # equals 5
+            </li>
+          </ul>
+        </code>
+        <p>
+          You can assign lambdas to variables, although most people will tell
+          you that you should just use def instead:
+        </p>
+        <code>
+          <ul>
+            <li class="code-li">
+              another_double = lambda x: 2 * x # don't do this
+            </li>
+            <li class="code-li">
+              def another_double(x): return 2 * x # do this instead
+            </li>
+          </ul>
+        </code>
+      </section>
+      <section class="main-section" id="strings">
+        <header>strings</header>
+        <p>
+          Strings can be delimited by single or double quotation marks (but the
+          quotes have to match):
+        </p>
+        <code
+          ><ul>
+            <li class="code-li">single_quoted_string = 'data science'</li>
+            <li class="code-li">double_quoted_string = "data science"</li>
+          </ul></code
+        >
+        <p>
+          Python uses backslashes to encode special characters. For example:
+        </p>
+        <code
+          ><ul>
+            <li class="code-li">
+              tab_string = "\t" # represents the tab character
+            </li>
+            <li class="code-li">len(tab_string) # is 1</li>
+          </ul></code
+        >
+        <p>
+          If you want backslashes as backslashes (which you might in Windows
+          directory names or in regular expressions), you can create raw strings
+          using r"":
+        </p>
+        <code
+          ><ul>
+            <li class="code-li">
+              not_tab_string = r"\t" # represents the characters '\' and 't'
+            </li>
+            <li class="code-li">len(not_tab_string) # is 2</li>
+          </ul></code
+        >
+      </section>
+      <section class="main-section" id="exceptions">
+        <header>exceptions</header>
+        <p>
+          When something goes wrong, Python raises an exception. Unhandled,
+          these will cause your program to crash. You can handle them using try
+          and except:
+        </p>
+        <code
+          ><ul>
+            <li class="code-li">try:</li>
+            <li class="code-li indent">print 0 / 0</li>
+            <li class="code-li">except ZeroDivisionError:</li>
+            <li class="code-li indent">print "cannot divide by zero"</li>
+          </ul></code
+        >
+        <p>
+          Although in many languages exceptions are considered bad, in Python
+          there is no shame in using them to make your code cleaner, and we will
+          occasionally do so.
+        </p>
+      </section>
+      <section class="main-section" id="lists">
+        <header>lists</header>
+        <p>
+          Probably the most fundamental data structure in Python is the list. A
+          list is simply an ordered collection. (It is similar to what in other
+          languages might be called an array, but with some added
+          functionality.)
+        </p>
+        <p>
+          You can get or set the nth element of a list with square brackets:
+        </p>
+        <code
+          ><ul>
+            <li class="code-li ord">integer_list = [1, 2, 3]</li>
+            <li class="code-li ord">
+              heterogeneous_list = ["string", 0.1, True]
+            </li>
+            <li class="code-li ord">
+              list_of_lists = [ integer_list, heterogeneous_list, [] ]
+            </li>
+            <li class="code-li ord">
+              list_length = len(integer_list) # equals 3
+            </li>
+            <li class="code-li ord">list_sum = sum(integer_list) # equals 6</li>
+          </ul></code
+        >
+        <p>Python has an in operator to check for list membership:</p>
+        <code
+          ><ul>
+            <li class="code-li ord">1 in [1, 2, 3] # True</li>
+            <li class="code-li ord">0 in [1, 2, 3] # False</li>
+          </ul>
+        </code>
+        <p>
+          This check involves examining the elements of the list one at a time,
+          which means that you probably shouldn’t use it unless you know your
+          list is pretty small (or unless you don’t care how long the check
+          takes).
+        </p>
+      </section>
+      <section class="main-section" id="tuples">
+        <header>tuples</header>
+        <p>
+          Tuples are lists’ immutable cousins. Pretty much anything you can do
+          to a list that doesn’t involve modifying it, you can do to a tuple.
+          You specify a tuple by using parentheses (or nothing) instead of
+          square brackets:
+        </p>
+        <code
+          ><ul>
+            <li class="code-li ord">my_list = [1, 2]</li>
+            <li class="code-li ord">my_tuple = (1, 2)</li>
+            <li class="code-li ord">other_tuple = 3, 4</li>
+            <li class="code-li ord">my_list[1] = 3 # my_list is now [1, 3]</li>
+            <li class="code-li ord"></li>
+            <li class="code-li ord">try:</li>
+            <li class="code-li ord indent">my_tuple[1] = 3</li>
+            <li class="code-li ord">except TypeError:</li>
+            <li class="code-li ord indent">print "cannot modify a tuple"</li>
+          </ul>
+        </code>
+      </section>
+      <section class="main-section" id="dictionaries">
+        <header>dictionaries</header>
+        <ul>
+          <li class="ord">
+            <span class="li-title">First part</span>
+            <p>
+              Another fundamental data structure is a dictionary, which
+              associates values with keys and allows you to quickly retrieve the
+              value corresponding to a given key:
+            </p>
+            <code>
+              <ul>
+                <li class="code-li ord">empty_dict = {} # Pythonic</li>
+                <li class="code-li ord">
+                  empty_dict2 = dict() # less Pythonic
+                </li>
+                <li class="code-li ord">
+                  grades = { "Joel" : 80, "Tim" : 95 } # dictionary literal
+                </li>
+              </ul>
+            </code>
+            <p>You can look up the value for a key using square brackets:</p>
+            <p>
+              But you’ll get a KeyError if you ask for a key that’s not in the
+              dictionary:
+            </p>
+            <p>
+              Dictionaries have a get method that returns a default value
+              (instead of raising an exception) when you look up a key that’s
+              not in the dictionary:
+            </p>
+          </li>
+          <li class="ord">
+            <span class="li-title">defaultdict</span>
+            <p>
+              Imagine that you’re trying to count the words in a document. An
+              obvious approach is to create a dictionary in which the keys are
+              words and the values are counts. As you check each word, you can
+              increment its count if it’s already in the dictionary and add it
+              to the dictionary if it’s not:
+            </p>
+            <p>
+              Every one of these is slightly unwieldy, which is why defaultdict
+              is useful. A defaultdict is like a regular dictionary, except that
+              when you try to look up a key it doesn’t contain, it first adds a
+              value for it using a zero-argument function you pro‐ vided when
+              you created it. In order to use defaultdicts, you have to import
+              them from collections:
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="sets">
+        <header>sets</header>
+        <p>
+          Another data structure is set, which represents a collection of
+          distinct elements:
+        </p>
+        <code
+          ><ul>
+            <li class="ord code-li">s = set()</li>
+            <li class="ord code-li">s.add(1) # s is now { 1 }</li>
+            <li class="ord code-li">s.add(2) # s is now { 1, 2 }</li>
+            <li class="ord code-li">s.add(2) # s is still { 1, 2 }</li>
+            <li class="ord code-li">x = len(s) # equals 2</li>
+            <li class="ord code-li">y = 2 in s # equals True</li>
+            <li class="ord code-li">z = 3 in s # equals False</li>
+          </ul></code
+        >
+        <p>
+          We'll use sets for two main reasons. The first is that in is a very
+          fast operation on sets. If we have a large collection of items that we
+          want to use for a membership test, a set is more appropriate than a
+          list:
+        </p>
+      </section>
+      <section class="main-section" id="truthiness">
+        <header>truthiness</header>
+        <p>
+          Booleans in Python work as in most other languages, except that
+          they're capitalized. Python uses the value None to indicate a
+          nonexistent value. It is similar to other languages’ null:
+        </p>
+        <code>
+          <ul>
+            <li class="ord code-li">
+              one_is_less_than_two = 1 <2 # equals True
+            </li>
+            <li class="ord code-li">
+              true_equals_false = True == False # equals False
+            </li>
+            <li class="ord code-li">x = None</li>
+            <li class="ord code-li">
+              print x == None # prints True, but is not Pythonic
+            </li>
+          </ul>
+        </code>
+        <p>
+          Python lets you use any value where it expects a Boolean. The
+          following are all “Falsy”:
+        </p>
+        <ul>
+          <li>False</li>
+          <li>None</li>
+          <li>[] (an empty list)</li>
+          <li>{} (an empty dict)</li>
+          <li>""</li>
+          <li>set()</li>
+          <li>0</li>
+          <li>0.0</li>
+          <li>0.0</li>
+        </ul>
+        <p>
+          Pretty much anything else gets treated as True. This allows you to
+          easily use if state ments to test for empty lists or empty strings or
+          empty dictionaries or so on. It also sometimes causes tricky bugs if
+          you're not expecting this behavior:
+        </p>
+        <code>
+          <ul>
+            <li class="ord code-li">
+              s = some_function_that_returns_a_string()
+            </li>
+            <li class="ord code-li">if s:</li>
+            <li class="ord code-li indent">first_char = s[0]</li>
+            <li class="ord code-li">else:</li>
+            <li class="ord code-li indent">first_char = ""</li>
+          </ul>
+        </code>
+      </section>
+
+      <section class="main-section" id="the-not-so-basics">
+        <header>the-not-so-basics</header>
+        <p>
+          Here we’ll look at some more-advanced Python features that we’ll find
+          useful for working with data.
+        </p>
+        <ul>
+          <li>
+            <span class="li-title">sorting</span>
+            <p>
+              Every Python list has a sort method that sorts it in place. If you
+              don’t want to mess up your list, you can use the sorted function,
+              which returns a new list:
+            </p>
+            <code>
+              <ul>
+                <li class="ord code-li">x = [4,1,2,3]</li>
+                <li class="ord code-li">
+                  y = sorted(x) # is [1,2,3,4], x is unchanged
+                </li>
+                <li class="ord code-li">x.sort() # now x is [1,2,3,4]</li>
+              </ul>
+            </code>
+            <p>
+              By default, sort (and sorted) sort a list from smallest to largest
+              based on naively comparing the elements to one another. If you
+              want elements sorted from largest to smallest, you can specify a
+              reverse=True parameter. And instead of comparing the elements
+              themselves, you can compare the results of a function that you
+              specify with key
+            </p>
+            <code>
+              <ul>
+                <li class="ord code-li">
+                  # sort the list by absolute value from largest to smallest
+                </li>
+                <li class="ord code-li">
+                  x = sorted([-4,1,-2,3], key=abs, reverse=True) # is
+                  [-4,3,-2,1]
+                </li>
+                <li></li>
+                <li class="ord code-li">x.sort() # now x is [1,2,3,4]</li>
+                <li class="ord code-li">
+                  # sort the words and counts from highest count to lowest
+                </li>
+                <li class="ord code-li">
+                  wc = sorted(word_counts.items(),key=lambda (word, count):
+                  count,reverse=True)
+                </li>
+              </ul>
+            </code>
+          </li>
+          <li>
+            <span class="li-title">list comprehensions</span>
+            <p>
+              Frequently, you’ll want to transform a list into another list, by
+              choosing only certain elements, or by transforming elements, or
+              both. The Pythonic way of doing this is list comprehensions
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="object-oriented-programming">
+        <header>object oriented programming</header>
+        <p>
+          Like many languages, Python allows you to define classes that
+          encapsulate data and the functions that operate on them. We’ll use
+          them sometimes to make our code cleaner and simpler. It’s probably
+          simplest to explain them by constructing a heavily annotated example.
+        </p>
+        <p>
+          Imagine we didn’t have the built-in Python set. Then we might want to
+          create our own Set class.
+        </p>
+        <p>
+          What behavior should our class have? Given an instance of Set, we’ll
+          need to be able to add items to it, remove items from it, and check
+          whether it contains a certain value. We’ll create all of these as
+          member functions, which means we’ll access them with a dot after a Set
+          object:
+        </p>
+      </section>
+
+      <div class="last"></div>
+    </main>
+  </body>
+</html>

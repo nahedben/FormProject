@@ -1,0 +1,110 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+  box-sizing: content-box;
+}
+@media (max-width: 900px) {
+  body nav {
+    width: 150px;
+  }
+  nav > header {
+    font-size: 0.9em;
+  }
+  div a {
+    padding: 2px;
+    font-size: 0.8em;
+  }
+  nav > div {
+    width: 100px;
+  }
+
+  body > #main-doc {
+    position: relative;
+    left: 200px;
+    margin-left: 20px;
+  }
+}
+nav {
+  position: fixed;
+  width: 25%;
+  height: 600px;
+  display: block;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  border-right: 3px solid #8f8f8f;
+}
+a {
+  text-transform: capitalize;
+  padding: 20px;
+  text-align: center;
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  color: #103030;
+}
+div {
+  border-bottom: 1.5px solid gainsboro;
+  padding: 10px 4px 10px 4px;
+  height: 2rem;
+  margin-bottom: 10px;
+}
+main {
+  position: relative;
+
+  width: 70%;
+  left: 350px;
+  height: 600px;
+}
+.code-li {
+  margin-left: 0px;
+  list-style: none;
+  color: rgb(226, 89, 189);
+}
+.indent {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: rgb(113, 220, 186);
+}
+.indent2 {
+  margin: 20px;
+  margin-top: 0px;
+  margin-bottom: 1px;
+  color: coral;
+}
+code {
+  display: block;
+  background-color: rgb(235, 228, 228);
+  height: auto;
+  width: auto;
+  padding: 10px 0px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.long-indent {
+  margin-left: 18em;
+}
+header {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.ord {
+  color: #040404;
+  padding-left: 10px;
+  list-style: none;
+}
+.li-title {
+  font-weight: bolder;
+}
+.last {
+  height: 50px;
+  width: 100%;
+}
+
+.last-nav {
+  height: 25px;
+  width: auto;
+}

@@ -1,0 +1,231 @@
+:root {
+  --title-color1: #e99ee9;
+  --button-col: rgb(245, 115, 67);
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  padding: -5px 0 0 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(255, 250, 250);
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+#header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  background-color: rgb(255, 250, 250);
+
+  border-bottom: 1px solid rgba(249, 247, 247, 0.916);
+}
+.blank {
+  background-color: rgb(255, 250, 250);
+  margin-bottom: 50px;
+  height: 70px;
+  width: 100%;
+}
+.navigation-bar {
+  width: 50%;
+  padding: 0 20px;
+}
+ul {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+}
+.left-side {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+}
+.main-header {
+  display: flex;
+  flex-direction: column;
+}
+span {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  text-transform: capitalize;
+  color: #515151;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  color: #515151;
+}
+
+form {
+  display: block;
+  margin: 10px auto;
+  width: 30%;
+}
+#email {
+  width: 100%;
+  margin: 10px auto;
+  letter-spacing: 0.2rem;
+  /* font-weight: 600; */
+}
+#submit {
+  display: block;
+  width: 35%;
+  margin: 10px auto;
+  border: none;
+  background-color: var(--button-col);
+  height: 2rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.title {
+  font-size: 1.8rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  /* font-weight: 600; */
+  letter-spacing: 0.2rem;
+}
+.para-title {
+  font-size: 1.8em;
+  color: #515151;
+  position: relative;
+  left: 7%;
+  text-transform: capitalize;
+}
+#content {
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+i {
+  color: orange;
+  text-align: right;
+  width: 10%;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.p-info {
+  /* margin-left: 10px; */
+  margin-right: 10px;
+  text-align: justify;
+  width: 80%;
+  color: #555;
+}
+#how-it-work {
+  width: 100%;
+  /* display: block; */
+  /* margin: 5px auto; */
+}
+iframe {
+  position: relative;
+  left: 25%;
+  border: 5px solid rgba(255, 250, 250, 0.651);
+  width: 50%;
+  height: 300px;
+  border-radius: 5px;
+  /* margin: 10px auto; */
+}
+#prices {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.box-price {
+  width: 30%;
+  height: 350px;
+  border: 1px solid #555;
+  /* padding: 10px; */
+}
+.box-header {
+  /* background-color: rgba(255, 250, 250, 0.384); */
+  background-color: rgba(228, 224, 224, 0.837);
+  height: 4rem;
+  color: rgba(119, 119, 119, 0.681);
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+.sub-title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: -5px;
+  margin-top: 5px;
+}
+button {
+  display: block;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 15px auto;
+  background-color: var(--button-col);
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+  letter-spacing: 0.35em;
+}
+.paragraphs {
+  /* background-color: yellow; */
+  height: 40%;
+  padding: 20px;
+}
+.empty {
+  height: 30px;
+  width: 100%;
+  background-color: transparent;
+}
+.text {
+  text-align: center;
+  margin: 10px auto;
+}
+@media only screen and (min-width: 685px) and (max-width: 830px) {
+  a {
+    letter-spacing: normal;
+  }
+  .box-header {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 684px) {
+  .nav-link {
+    letter-spacing: normal;
+    /* background-color: yellow; */
+    font-size: 0.7em;
+  }
+  .box-header {
+    font-size: 1.2em;
+  }
+  #prices {
+    /* width: 100%; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-price {
+    width: 70%;
+    height: 350px;
+    border: 1px solid #555;
+    margin: 20px;
+  }
+  .box-header {
+    font-size: 1.8em;
+  }
+}
