@@ -2,24 +2,123 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>portfolio</title>
   </head>
   <body>
-    <nav id="navbar">
-      <a href="#"></a>
-      <a href="#"></a>
-      <a href="#"></a>
-    </nav>
-    <section class="welcome-section">
-      <h1></h1>
+    <div class="flex-nav">
+      <nav id="navbar">
+        <a href="#wellcome">about</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </div>
+    <section class="empty"></section>
+    <section class="welcome" id="wellcome-section">
+      <h1>Hey I'm Nahed</h1>
+      <p>a web developer</p>
     </section>
     <section id="projects">
-      <header class="project-title"></header>
-      <a href="#" target="_blank">
-        <img src="" alt="first project" />
-      </a>
+      <header class="project-tile">
+        <span class="header-dec">these are some of my projects</span>
+      </header>
+      <div class="pjts-wrapper">
+        <a href="https://nahedben.github.io/product_land_page/" target="_blank">
+          <div class="project">
+            <div class="image">
+              <img
+                src="https://image.shutterstock.com/image-vector/fork-knife-spoon-icon-logo-600w-1666335031.jpg"
+                alt="first project"
+              />
+              <header class="title-img">
+                <span> pastry </span><span>school</span>
+              </header>
+            </div>
+            <div class="empty"></div>
+
+            <p>
+              <span class="chev-1">< </span> Pastry school training
+              <span class="chev-2">></span>
+            </p>
+          </div>
+        </a>
+        <a href="https://nahedben.github.io/tribute/" target="_blank">
+          <div class="project">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZDxk9aOnRNCBpbu6RlTj5qyHfipSNyKPhg&usqp=CAU"
+              alt="tribute"
+            />
+            <div class="empty"></div>
+            <p>
+              <span class="chev-1">< </span> albert einstein tribute<span
+                class="chev-2"
+                >></span
+              >
+            </p>
+          </div>
+        </a>
+        <a href="https://nahedben.github.io/mycv22/" target="_blank">
+          <div class="project added-text">
+            <img src="https://nahedben.github.io/mycv22/mycv.png" alt="mycv" />
+            <div class="empty"></div>
+            <p>
+              <span class="chev-1">< </span> CV <span class="chev-2">></span>
+            </p>
+          </div>
+        </a>
+        <a href="https://nahedben.github.io/python-course//" target="_blank">
+          <div class="project">
+            <img
+              src="https://nahedben.github.io/python-course/snapshut.png"
+              alt="python course"
+            />
+            <div class="empty"></div>
+            <p>
+              <span class="chev-1">< </span> python course
+              <span class="chev-2">></span>
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="footer-page">
+      <header>let's work together...</header>
+      <p>How do you take a coffee?</p>
+      <ul id="contact">
+        <li>
+          <a href="https://www.facebook.com/nahed.benhadj" target="_blanc"
+            ><i class="fab fa-facebook"></i> Facebook</a
+          >
+        </li>
+
+        <li>
+          <a
+            id="profile-link"
+            href="https://github.com/nahedben"
+            target="_blanc"
+            ><i class="fab fa-github"></i> github</a
+          >
+        </li>
+        <li>
+          <a href=""><i class="fab fa-twitter"></i> twitter</a>
+        </li>
+        <li>
+          <a href="mailto:nahedben@gmail.com?contact = Feedback&body = Message"
+            ><i class="fas fa-envelope"></i> send me email</a
+          >
+        </li>
+        <li>
+          <a href="tel: 00966563911045"
+            ><i class="fa fa-mobile"></i> call me / whatsapp</a
+          >
+        </li>
+      </ul>
     </section>
   </body>
 </html>

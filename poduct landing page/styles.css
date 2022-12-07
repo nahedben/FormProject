@@ -180,6 +180,19 @@ button {
   box-shadow: none;
   letter-spacing: 0.35em;
 }
+button:active,
+form #submit:active {
+  transform: scale(1.2);
+}
+.nav-link:hover {
+  /* background-color: rgb(237, 240, 240); */
+  letter-spacing: 0.1rem;
+}
+button:hover,
+form #submit:hover {
+  background-color: rgb(253, 184, 120);
+  font-size: 0.9em;
+}
 .paragraphs {
   /* background-color: yellow; */
   height: 40%;
